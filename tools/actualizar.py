@@ -10,11 +10,12 @@ combos.json = valores de 'Combos'!A4:F (nombre, perfume 1, 2, 3, precio, mostrar
 Solo reescribe el bloque entre /*DATOS:INICIO*/ y /*DATOS:FIN*/ y la fecha/dólar del encabezado.
 El diseño, los textos, el pack de la semana y la escala no se tocan.
 """
-import argparse, json, os, re, sys
+import argparse, json, math, os, re, sys
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML = os.path.join(RAIZ, "index.html")
 CFG = os.path.join(RAIZ, "tools", "config.json")
+ENC = os.path.join(RAIZ, "tools", "encargos.json")
 
 
 def num(txt):
@@ -96,7 +97,26 @@ def main():
               f"const FIJO = new Set({json.dumps(cfg['precio_fijo'])});\n"
               "/*DATOS:FIN*/")
 
+    # Encargos: perfumes que no están en stock, con precio estimado desde Compras Paraguai
+    enc_cfg = json.load(open(ENC, encoding="utf-8"))
+    encargos = []
+    for e in enc_cfg["productos"]:
+        if e["c"] in codigos or not e.get("ofertas"):
+            continue
+        of = sorted(e["ofertas"])
+        base = of[1] if len(of) > 1 and of[0] <= 0.8 * of[1] else of[0]
+        r = enc_cfg["recargo"][e["cat"]]
+        usd = math.ceil(base * (1 + r["pct"]) + r["fijo"])
+        encargos.append({"c": e["c"], "m": e["m"], "n": e["n"], "pres": e["pres"], "cat": e["cat"], "u": usd})
+    encargos.sort(key=lambda x: (x["m"], x["n"]))
+    bloque_enc = ("/*ENCARGOS:INICIO*/\n"
+                  f"const ENCARGOS = {json.dumps(encargos, ensure_ascii=False)};\n"
+                  "/*ENCARGOS:FIN*/")
+
     html = open(HTML, encoding="utf-8").read()
+    html, k = re.subn(r"/\*ENCARGOS:INICIO\*/.*?/\*ENCARGOS:FIN\*/", lambda _: bloque_enc, html, flags=re.S)
+    if k != 1:
+        sys.exit("No encontré el bloque de encargos en index.html")
     html, k = re.subn(r"/\*DATOS:INICIO\*/.*?/\*DATOS:FIN\*/", lambda _: bloque, html, flags=re.S)
     if k != 1:
         sys.exit("No encontré el bloque de datos en index.html")
@@ -106,7 +126,7 @@ def main():
         sys.exit("No encontré la fecha del encabezado")
     open(HTML, "w", encoding="utf-8").write(html)
 
-    print(f"OK: {len(productos)} productos, {sum(p['s'] for p in productos)} unidades, {len(combos)} combos")
+    print(f"OK: {len(productos)} productos, {sum(p['s'] for p in productos)} unidades, {len(combos)} combos, {len(encargos)} encargos")
     if nuevos:
         print("Productos nuevos (usan el nombre del Sheet):", *nuevos, sep="\n  ")
     if sin_foto:

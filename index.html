@@ -191,6 +191,11 @@ td.r,th.r{text-align:right}
 .decants .dg b{display:block;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gris);margin-bottom:3px}
 .decants .dg span{display:block;font-size:.88rem;line-height:1.5}
 .decants .small{margin:0 0 14px}
+.cotizar{margin-top:18px;border:1px solid var(--borde);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.cotizar label{font-weight:600;font-size:.9rem}
+.cotizar-fila{display:flex;gap:10px;flex-wrap:wrap}
+.cotizar-fila input{flex:1 1 240px;border:1px solid var(--borde);background:var(--blanco);border-radius:8px;padding:10px 12px;min-width:0}
+.cotizar-fila .btn{display:inline-flex;align-items:center}
 footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
 
 @media (max-width:860px){
@@ -234,6 +239,7 @@ footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
       <a class="chip-link" href="#escala">Escala</a>
       <a class="chip-link" href="#decants">Decants</a>
       <a class="chip-link" href="#stock">Stock</a>
+      <a class="chip-link" href="#encargos">Encargos</a>
       <a class="chip-link" href="#pedido">Mi pedido</a>
     </nav>
   </div>
@@ -323,6 +329,31 @@ footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
     </div>
   </section>
 
+  <section id="encargos">
+    <div class="sec-head">
+      <div class="eyebrow">Por encargo</div>
+      <h2>¿No está en stock? Encargalo</h2>
+      <p>Perfumes que conseguimos por encargo, con precio estimado. Suman unidades para tu escalón. Apenas lleguen nos ponemos en contacto: pueden tardar hasta 15 días hábiles.</p>
+    </div>
+    <div class="filtros">
+      <input id="buscarEnc" type="search" placeholder="Buscar perfume para encargar" aria-label="Buscar perfume para encargar">
+    </div>
+    <div class="tabla-wrap">
+      <table>
+        <thead><tr><th>Perfume</th><th class="r col-usd">USD</th><th class="r">Te sale aprox.</th><th class="r col-sug">Al público</th><th class="r">Ganás</th><th class="r">Pedido</th></tr></thead>
+        <tbody id="encBody"></tbody>
+      </table>
+    </div>
+    <p class="nota">El precio es estimado y se confirma por WhatsApp antes de encargar. Los encargos no tienen descuento por escala.</p>
+    <div class="cotizar">
+      <label for="cotizar">¿Buscás otro perfume? Escribilo y te lo cotizamos</label>
+      <div class="cotizar-fila">
+        <input id="cotizar" type="text" placeholder="Ej.: Lattafa Khamrah Qahwa 100 ml">
+        <a class="btn wa-btn" id="cotizarBtn" href="#" target="_blank" rel="noopener" aria-disabled="true">Pedir cotización</a>
+      </div>
+    </div>
+  </section>
+
   <section id="equivalencias">
     <div class="sec-head">
       <div class="eyebrow">Para cerrar la venta</div>
@@ -370,7 +401,7 @@ footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
       <div><b>Retiro</b>Por el showroom en CABA, coordinando antes.</div>
     </div>
     <div class="cond" style="margin-top:22px">
-      <div><b>Encargos</b>¿Buscás algo que no está acá? Pedilo en el grupo. Suma para tu escalón.</div>
+      <div><b>Encargos</b>Lo que no está en stock lo encargamos: puede tardar hasta 15 días hábiles. Suma para tu escalón.</div>
       <div><b>Preventa</b>Reservá con seña antes de cada compra y lo recibís apenas llega.</div>
       <div><b>Kit de contenido</b>Fotos, videos sin sonido y textos sin marca para que los uses como quieras.</div>
       <div><b>Decants</b>Muestras de 5 ml de perfumes seleccionados, para que tus clientes prueben antes del frasco.</div>
@@ -396,6 +427,10 @@ const COMBOS = [{"n": "Frescos y frutales", "items": ["AR-028", "AR-282", "AR-16
 const IMG = {"AR-002": "img/AR-002.webp", "AR-006": "img/AR-006.webp", "AR-009": "img/AR-009.webp", "AR-015": "img/AR-015.webp", "AR-018": "img/AR-018.webp", "AR-020": "img/AR-020.webp", "AR-023": "img/AR-023.webp", "AR-028": "img/AR-028.webp", "AR-029": "img/AR-029.webp", "AR-035": "img/AR-035.webp", "AR-036": "img/AR-036.webp", "AR-043": "img/AR-043.webp", "AR-045": "img/AR-045.webp", "AR-046": "img/AR-046.webp", "AR-047": "img/AR-047.webp", "AR-048": "img/AR-048.webp", "AR-053": "img/AR-053.webp", "AR-056": "img/AR-056.webp", "AR-058": "img/AR-058.webp", "AR-060": "img/AR-060.webp", "AR-061": "img/AR-061.webp", "AR-066": "img/AR-066.webp", "AR-067": "img/AR-067.webp", "AR-081": "img/AR-081.webp", "AR-082": "img/AR-082.webp", "AR-085": "img/AR-085.webp", "AR-088": "img/AR-088.webp", "AR-089": "img/AR-089.webp", "AR-091": "img/AR-091.webp", "AR-093": "img/AR-093.webp", "AR-095": "img/AR-095.webp", "AR-102": "img/AR-102.webp", "AR-113": "img/AR-113.webp", "AR-114": "img/AR-114.webp", "AR-117": "img/AR-117.webp", "AR-118": "img/AR-118.webp", "AR-122": "img/AR-122.webp", "AR-124": "img/AR-124.webp", "AR-128": "img/AR-128.webp", "AR-152": "img/AR-152.webp", "AR-153": "img/AR-153.webp", "AR-154": "img/AR-154.webp", "AR-165": "img/AR-165.webp", "AR-168": "img/AR-168.webp", "AR-185": "img/AR-185.webp", "AR-195": "img/AR-195.webp", "AR-200": "img/AR-200.webp", "AR-210": "img/AR-210.webp", "AR-216": "img/AR-216.webp", "AR-217": "img/AR-217.webp", "AR-218": "img/AR-218.webp", "AR-222": "img/AR-222.webp", "AR-225": "img/AR-225.webp", "AR-226": "img/AR-226.webp", "AR-228": "img/AR-228.webp", "AR-229": "img/AR-229.webp", "AR-230": "img/AR-230.webp", "AR-231": "img/AR-231.webp", "AR-237": "img/AR-237.webp", "AR-238": "img/AR-238.webp", "AR-256": "img/AR-256.webp", "AR-260": "img/AR-260.webp", "AR-278": "img/AR-278.webp", "AR-279": "img/AR-279.webp", "AR-282": "img/AR-282.webp", "AR-283": "img/AR-283.webp", "AR-296": "img/AR-296.webp", "AR-307": "img/AR-307.webp", "AR-308": "img/AR-308.webp", "AR-310": "img/AR-310.webp", "AR-324": "img/AR-324.webp", "AR-327": "img/AR-327.webp", "AR-332": "img/AR-332.webp", "AR-338": "img/AR-338.webp", "AR-341": "img/AR-341.webp", "AR-342": "img/AR-342.webp", "AR-343": "img/AR-343.webp", "AR-346": "img/AR-346.webp", "AR-349": "img/AR-349.webp", "AR-352": "img/AR-352.webp", "AR-353": "img/AR-353.webp", "AR-354": "img/AR-354.webp", "AR-355": "img/AR-355.webp", "AR-357": "img/AR-357.webp", "AR-359": "img/AR-359.webp", "AR-367": "img/AR-367.webp", "AR-371": "img/AR-371.webp", "AR-372": "img/AR-372.webp", "AR-374": "img/AR-374.webp", "AR-378": "img/AR-378.webp", "AR-379": "img/AR-379.webp", "CK-003": "img/CK-003.webp", "CK-012": "img/CK-012.webp", "CK-024": "img/CK-024.webp", "CK-025": "img/CK-025.webp", "DN-002": "img/DN-002.webp", "DN-008": "img/DN-008.webp", "DN-018": "img/DN-018.webp", "DN-020": "img/DN-020.webp", "DN-021": "img/DN-021.webp", "DN-023": "img/DN-023.webp", "DN-027": "img/DN-027.webp", "DN-046": "img/DN-046.webp", "DN-047": "img/DN-047.webp", "DN-048": "img/DN-048.webp", "DN-058": "img/DN-058.webp", "DN-060": "img/DN-060.webp"};
 const FIJO = new Set(["AR-341", "DN-002", "DN-018", "DN-020", "DN-021", "DN-027", "CK-025", "AR-216", "AR-222", "AR-225", "AR-346", "AR-023", "AR-043", "AR-102", "AR-349", "AR-354", "AR-355", "AR-352", "AR-353", "AR-359", "TS-015", "DN-046", "AR-374", "DN-048", "DN-058", "AR-378"]);
 /*DATOS:FIN*/
+/*ENCARGOS:INICIO*/
+const ENCARGOS = [{"c": "AR-182", "m": "Afnan", "n": "9AM Dive", "pres": "EDP 100 ml", "cat": "arabe", "u": 35}, {"c": "AR-176", "m": "Armaf", "n": "Odyssey Mandarin Sky", "pres": "EDP 100 ml", "cat": "arabe", "u": 29}, {"c": "AR-220", "m": "French Avenue", "n": "Liquid Brun", "pres": "EDP 100 ml", "cat": "arabe", "u": 50}, {"c": "AR-016", "m": "Lattafa", "n": "Angham", "pres": "EDP 100 ml", "cat": "arabe", "u": 31}, {"c": "AR-017", "m": "Lattafa", "n": "Angham Second Song", "pres": "EDP 100 ml", "cat": "arabe", "u": 28}, {"c": "AR-013", "m": "Lattafa", "n": "Asad Zanzibar", "pres": "EDP 100 ml", "cat": "arabe", "u": 26}, {"c": "AR-040", "m": "Lattafa", "n": "Eclaire", "pres": "EDP 100 ml", "cat": "arabe", "u": 37}, {"c": "AR-065", "m": "Lattafa", "n": "Khamrah", "pres": "EDP 100 ml", "cat": "arabe", "u": 31}, {"c": "AR-106", "m": "Lattafa", "n": "Qaed Al Fursan", "pres": "EDP 90 ml", "cat": "arabe", "u": 23}, {"c": "AR-123", "m": "Lattafa", "n": "Yara", "pres": "EDP 100 ml", "cat": "arabe", "u": 34}, {"c": "AR-132", "m": "Lattafa", "n": "Yara Tous", "pres": "EDP 100 ml", "cat": "arabe", "u": 26}, {"c": "AR-239", "m": "Maison Alhambra", "n": "Decadent Dream", "pres": "EDP 100 ml", "cat": "arabe", "u": 18}, {"c": "AR-263", "m": "Maison Alhambra", "n": "Glacier Bold", "pres": "EDP 100 ml", "cat": "arabe", "u": 19}, {"c": "PY-004", "m": "Maison Alhambra", "n": "Jean Lowe Azure", "pres": "EDP 100 ml", "cat": "arabe", "u": 29}, {"c": "AR-240", "m": "Maison Alhambra", "n": "Pink Eclipse", "pres": "EDP 100 ml", "cat": "arabe", "u": 39}, {"c": "AR-271", "m": "Maison Alhambra", "n": "Salvo Elixir", "pres": "EDP 60 ml", "cat": "arabe", "u": 20}, {"c": "AR-293", "m": "Maison Alhambra", "n": "So Candid (fem.)", "pres": "EDP 85 ml", "cat": "arabe", "u": 23}, {"c": "AR-309", "m": "Rasasi", "n": "Hawas Ice", "pres": "EDP 100 ml", "cat": "arabe", "u": 38}, {"c": "AR-363", "m": "Rayhaan", "n": "Aquatica", "pres": "EDP 100 ml", "cat": "arabe", "u": 35}, {"c": "PY-003", "m": "Rayhaan", "n": "Ocean Rush", "pres": "EDP 100 ml", "cat": "arabe", "u": 28}, {"c": "PY-001", "m": "Rayhaan", "n": "Pacific", "pres": "EDP 100 ml", "cat": "arabe", "u": 28}, {"c": "PY-002", "m": "Rayhaan", "n": "Pacific Aura", "pres": "EDP 100 ml", "cat": "arabe", "u": 32}];
+/*ENCARGOS:FIN*/
+const ENC = Object.fromEntries(ENCARGOS.map(e=>[e.c,e]));
 const MARKUP = {arabe:1.5, disenador:1.35, nicho:1.2, tester:1.35, kit:1.5, kit_dis:1.35};
 // Precio fijo: margen menor al 20% según la planilla de costos (19/10), sin descuento por escala
 PRODUCTOS.forEach(p=>{ p.ars = p.u*DOLAR; p.fijo = FIJO.has(p.c); });
@@ -429,12 +464,14 @@ const foto = (code, alt) => IMG[code] ? `<img src="${IMG[code]}" alt="${alt}" lo
 
 let cart = {items:{}, combos:{}};
 try{ const s = JSON.parse(localStorage.getItem("fdl-cart-v2")||"null"); if(s && s.items) cart = s; }catch(e){}
+cart.enc = cart.enc || {};
 const save = () => { try{ localStorage.setItem("fdl-cart-v2",JSON.stringify(cart)); }catch(e){} };
 
 function usados(code){ let u = cart.items[code]||0; COMBOS.forEach((k,i)=>{ if(k.items.includes(code)) u += (cart.combos[i]||0); }); return u; }
 const libre = code => BY[code].s - usados(code);
 const comboLibre = i => Math.min(...COMBOS[i].items.map(libre));
-function unidades(){ return Object.values(cart.items).reduce((a,b)=>a+b,0) + 3*Object.values(cart.combos).reduce((a,b)=>a+b,0); }
+const sum = o => Object.values(o).reduce((a,b)=>a+b,0);
+function unidades(){ return sum(cart.items) + Object.entries(cart.combos).reduce((a,[i,n])=>a+(COMBOS[i]?COMBOS[i].items.length*n:0),0) + sum(cart.enc); }
 function tierActual(){ const u=unidades(); let t=null; TIERS.forEach(x=>{ if(u>=x.min) t=x; }); return t; }
 function costo(p,t){ const d=(t&&!p.fijo)?t.desc:0; return {usd:p.u*(1-d), ars:p.ars*(1-d)}; }
 const sugerido = p => r100(p.ars*MARKUP[p.cat]);
@@ -442,6 +479,25 @@ const ganancia = (p,t) => sugerido(p) - costo(p,t).ars;
 const comboSep = k => k.items.reduce((a,c)=>a+BY[c].ars,0);
 const comboSug = k => k.items.reduce((a,c)=>a+sugerido(BY[c]),0);
 const comboUsd = k => k.ars/DOLAR;
+const encNombre = e => e.n.toLowerCase().includes(e.m.toLowerCase()) ? e.n : `${e.m} ${e.n}`;
+const encSug = e => r100(e.u*DOLAR*MARKUP[e.cat]);
+function renderEncargos(){
+  const q = document.getElementById("buscarEnc").value.trim().toLowerCase();
+  const list = ENCARGOS.filter(e => !q || (e.n+" "+e.m).toLowerCase().includes(q));
+  document.getElementById("encBody").innerHTML = list.length ? list.map(e=>{ const c=cart.enc[e.c]||0, ea=e.u*DOLAR;
+    return `<tr>
+      <td><div class="p-nom">${e.n}</div><div class="p-marca">${e.m} · ${e.pres}</div></td>
+      <td class="r num col-usd">${fmtU(e.u)}</td>
+      <td class="r num">${fmt(ea)}</td>
+      <td class="r num col-sug">${fmt(encSug(e))}</td>
+      <td class="r num gana">${fmt(encSug(e)-ea)}</td>
+      <td class="r"><div class="qty"><button data-esub="${e.c}" aria-label="Quitar ${e.n}" ${c?"":"disabled"}>−</button><span class="num">${c}</span><button data-eadd="${e.c}" aria-label="Agregar ${e.n}">+</button></div></td>
+    </tr>`; }).join("") : `<tr><td colspan="6" class="vacio">No está en la lista. Escribí el nombre abajo y te lo cotizamos.</td></tr>`;
+  const nom = document.getElementById("cotizar").value.trim();
+  const b = document.getElementById("cotizarBtn");
+  b.href = nom ? `https://wa.me/${WA}?text=${encodeURIComponent("Hola! Soy revendedor/a. ¿Me cotizás este perfume por encargo? "+nom)}` : "#";
+  b.setAttribute("aria-disabled", nom?"false":"true");
+}
 
 function tags(p){
   let h = "";
@@ -520,7 +576,7 @@ function renderStock(){
       <td class="r num gana">${fmt(ganancia(p,t))}</td>
       <td class="r"><div class="qty"><button data-sub="${p.c}" aria-label="Quitar ${p.n}" ${c?"":"disabled"}>−</button><span class="num">${c}</span><button data-add="${p.c}" aria-label="Agregar ${p.n}" ${libre(p.c)>0?"":"disabled"}>+</button></div></td>
     </tr>`;
-  }).join("") : `<tr><td colspan="6" class="vacio">No lo encontramos en stock. Pedilo por encargo en el grupo.</td></tr>`;
+  }).join("") : `<tr><td colspan="6" class="vacio">No lo encontramos en stock. Buscalo en <a href="#encargos">Encargos</a>.</td></tr>`;
 }
 
 function renderEquiv(){
@@ -537,7 +593,11 @@ function totales(){
   COMBOS.forEach((k,i)=>{ const c=cart.combos[i]; if(!c) return;
     usd+=comboUsd(k)*c; ars+=k.ars*c; ahorro+=(comboSep(k)-k.ars)*c; gan+=(comboSug(k)-k.ars)*c;
     lineas.push({txt:`${c} × Combo ${k.n} (${k.items.map(x=>nombre(BY[x])).join(", ")})`, ars:k.ars*c}); });
-  return {t, usd, ars, ahorro, gan, lineas};
+  let encUsd=0, encArs=0;
+  ENCARGOS.forEach(e=>{ const c=cart.enc[e.c]; if(!c) return; const ea=e.u*DOLAR;
+    usd+=e.u*c; ars+=ea*c; encUsd+=e.u*c; encArs+=ea*c; gan+=(encSug(e)-ea)*c;
+    lineas.push({txt:`${c} × ${encNombre(e)} ${e.pres} (encargo, precio estimado)`, ars:ea*c}); });
+  return {t, usd, ars, ahorro, gan, lineas, encUsd, encArs};
 }
 function mensaje(){
   const {t, usd, ars, lineas} = totales(), u = unidades();
@@ -546,7 +606,8 @@ function mensaje(){
   return [`Hola! Soy ${nom}, revendedor/a. Te paso mi pedido:`, ...lineas.map(l=>"• "+l.txt), "",
     `Unidades: ${u}`, `Escalón: ${t?t.label+" ("+t.extra+")":"—"}`,
     `Total: ${pago==="usd"?fmtU(usd):fmt(ars)}`, `Pago: ${pago==="usd"?"efectivo en dólares":"transferencia en pesos"}`,
-    `Entrega: ${entrega==="envio"?"envío"+(ciudad?" a "+ciudad:""):"retiro por el showroom"}`].join("\n");
+    `Entrega: ${entrega==="envio"?"envío"+(ciudad?" a "+ciudad:""):"retiro por el showroom"}`,
+    ...(sum(cart.enc)?["","Los encargos tienen precio estimado: confirmame el precio final antes de encargar."]:[])].join("\n");
 }
 function renderPedido(){
   const {t, usd, ars, ahorro, gan, lineas} = totales(), u = unidades(), pago = document.getElementById("pago").value;
@@ -572,7 +633,7 @@ function renderPedido(){
   document.getElementById("barraFill").style.width = Math.min(100,u/15*100)+"%";
 }
 
-function renderAll(){ renderPack(); renderCombos(); renderEscala(); renderStock(); renderEquiv(); renderPedido(); save(); }
+function renderAll(){ renderPack(); renderCombos(); renderEscala(); renderStock(); renderEncargos(); renderEquiv(); renderPedido(); save(); }
 
 document.addEventListener("click", e=>{
   const a=e.target.closest("[data-add]"), s=e.target.closest("[data-sub]"), ca=e.target.closest("[data-cadd]"), cs=e.target.closest("[data-csub]"), cp=e.target.closest("[data-copy]");
@@ -581,10 +642,14 @@ document.addEventListener("click", e=>{
   if(ca){ const i=+ca.dataset.cadd; if(comboLibre(i)>0){ cart.combos[i]=(cart.combos[i]||0)+1; renderAll(); } }
   if(cs){ const i=+cs.dataset.csub; cart.combos[i]=Math.max(0,(cart.combos[i]||0)-1); if(!cart.combos[i]) delete cart.combos[i]; renderAll(); }
   if(cp){ const el=document.getElementById(cp.dataset.copy); copiar(el.textContent, el); }
+  const ea=e.target.closest("[data-eadd]"), es=e.target.closest("[data-esub]");
+  if(ea){ const c=ea.dataset.eadd; cart.enc[c]=(cart.enc[c]||0)+1; renderAll(); }
+  if(es){ const c=es.dataset.esub; cart.enc[c]=Math.max(0,(cart.enc[c]||0)-1); if(!cart.enc[c]) delete cart.enc[c]; renderAll(); }
 });
 document.getElementById("copiarPedido").addEventListener("click", ()=>copiar(mensaje()));
-document.getElementById("vaciar").addEventListener("click", ()=>{ cart={items:{},combos:{}}; renderAll(); toast("Pedido vacío"); });
+document.getElementById("vaciar").addEventListener("click", ()=>{ cart={items:{},combos:{},enc:{}}; renderAll(); toast("Pedido vacío"); });
 ["buscar","marca","cat","orden"].forEach(id=>document.getElementById(id).addEventListener("input", renderStock));
+["buscarEnc","cotizar"].forEach(id=>document.getElementById(id).addEventListener("input", renderEncargos));
 ["pago","entrega","ciudad","nombre"].forEach(id=>document.getElementById(id).addEventListener("input", renderPedido));
 
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.hidden=false; clearTimeout(toast.t); toast.t=setTimeout(()=>el.hidden=true,1600); }
@@ -594,6 +659,8 @@ function copiar(texto, el){
 }
 // Limpia del pedido guardado lo que ya no tiene stock
 Object.keys(cart.items).forEach(c=>{ if(!BY[c]) delete cart.items[c]; });
+Object.keys(cart.enc).forEach(c=>{ if(!ENC[c]) delete cart.enc[c]; });
+Object.keys(cart.combos).forEach(i=>{ if(!COMBOS[i]) delete cart.combos[i]; });
 renderAll();
 </script>
 </body>

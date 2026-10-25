@@ -23,3 +23,14 @@ No toca el pack de la semana, los textos, la escala ni el diseño.
 - Nombres prolijos por código en `tools/config.json → nombres`. Un producto nuevo usa el nombre del Sheet hasta que se agregue ahí.
 - Fotos: `img/<CÓDIGO>.webp` (cuadradas, ~360 px). Si falta, el panel muestra el nombre en lugar de la foto.
 - Precio fijo (sin descuento por escala): `tools/config.json → precio_fijo` (margen < 20 % según la planilla de costos).
+
+## Encargos (precio estimado desde Compras Paraguai)
+
+Lista en `tools/encargos.json`. Cada producto: código (`c`, el del Sheet o `PY-xxx`), marca, nombre, presentación, categoría (`arabe` / `disenador` / `nicho`), URL de la ficha en comprasparaguai.com.br, `ofertas` (las 4 más baratas en USD, sin atacado/tester/kit/otra variante) y `fecha`.
+
+- Precio base: la oferta más barata; si está 20 % o más abajo de la segunda, se usa la segunda.
+- Precio al revendedor (USD, redondeado hacia arriba): árabes base × 1,52 · diseñador base × 1,42 · nicho base × 1,17 + 20.
+- Si el producto tiene stock en el Sheet, no aparece como encargo (está en la lista de stock).
+- Suman unidades para la escala, sin descuento. Leyenda: "pueden tardar hasta 15 días hábiles".
+
+Actualización semanal: para cada producto, abrir la URL con WebFetch (de a 3–4 por vez, con pausa si aparece 429) y reemplazar `ofertas` y `fecha`. Para sumar productos: buscar en `https://www.comprasparaguai.com.br/busca/?q=<nombre>`, abrir la ficha de la presentación correcta y agregarlo. Después correr `actualizar.py` como siempre.

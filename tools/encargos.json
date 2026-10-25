@@ -1,0 +1,466 @@
+{
+ "_leeme": "Perfumes para encargo. 'ofertas' = las 4 más baratas en Compras Paraguai (sin atacado/tester/kit), en USD. El precio base es la más barata; si está 20% o más abajo de la segunda, se usa la segunda. 'c' = código del Sheet si existe (si el producto tiene stock, no se muestra como encargo) o PY-xxx si no está en el Sheet.",
+ "recargo": {
+  "arabe": {
+   "pct": 0.52,
+   "fijo": 0
+  },
+  "disenador": {
+   "pct": 0.42,
+   "fijo": 0
+  },
+  "nicho": {
+   "pct": 0.17,
+   "fijo": 20
+  }
+ },
+ "productos": [
+  {
+   "c": "AR-363",
+   "m": "Rayhaan",
+   "n": "Aquatica",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rayhaan-aquatica-eau-de-parfum-masculino-100ml_68950/",
+   "ofertas": [
+    22.5,
+    22.5,
+    25,
+    25
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "PY-001",
+   "m": "Rayhaan",
+   "n": "Pacific",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rayhaan-pacific-eau-de-parfum-masculino-100ml_61515/",
+   "ofertas": [
+    17.85,
+    19,
+    19,
+    19.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "PY-002",
+   "m": "Rayhaan",
+   "n": "Pacific Aura",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rayhaan-pacific-aura-eau-de-parfum-masculino-100ml_64178/",
+   "ofertas": [
+    21,
+    21,
+    23,
+    24
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "PY-003",
+   "m": "Rayhaan",
+   "n": "Ocean Rush",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rayhaan-ocean-rush-eau-de-parfum-masculino-100ml_61514/",
+   "ofertas": [
+    14,
+    18,
+    19.5,
+    20
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-371",
+   "m": "Rayhaan",
+   "n": "Tropical Vibe",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rayhaan-tropical-vibe-eau-de-parfum-unissex-100ml_68953/",
+   "ofertas": [
+    20,
+    20,
+    23.49,
+    25.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-308",
+   "m": "Rasasi",
+   "n": "Hawas Malibu",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rasasi-hawas-malibu-eau-de-parfum-masculino-100ml_65520/",
+   "ofertas": [
+    22.99,
+    24,
+    24,
+    24
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-309",
+   "m": "Rasasi",
+   "n": "Hawas Ice",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rasasi-hawas-ice-for-him-eau-de-parfum-masculino-100ml_59007/",
+   "ofertas": [
+    24.5,
+    24.5,
+    24.5,
+    24.9
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-310",
+   "m": "Rasasi",
+   "n": "Hawas Tropical",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rasasi-hawas-tropical-eau-de-parfum-masculino-100ml_65519/",
+   "ofertas": [
+    25,
+    25,
+    27.5,
+    27.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-307",
+   "m": "Rasasi",
+   "n": "Hawas Kobra",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-rasasi-hawas-kobra-eau-de-parfum-masculino-100ml_66313/",
+   "ofertas": [
+    23.75,
+    23.75,
+    23.75,
+    25
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-182",
+   "m": "Afnan",
+   "n": "9AM Dive",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-afnan-9am-dive-eau-de-parfum-unissex-100ml_56243/",
+   "ofertas": [
+    22.49,
+    22.9,
+    23,
+    23
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-185",
+   "m": "Afnan",
+   "n": "9PM Night Out",
+   "pres": "Extrait 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-afnan-9pm-night-out-extrait-de-parfum-unissex-100ml_67086/",
+   "ofertas": [
+    36,
+    36,
+    37.5,
+    37.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-091",
+   "m": "Lattafa",
+   "n": "Nebras",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-nebras-eau-de-parfum-unissex-100ml_50622/",
+   "ofertas": [
+    18.5,
+    20,
+    24,
+    25
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-016",
+   "m": "Lattafa",
+   "n": "Angham",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-angham-eau-de-parfum-unissex-100ml_58815/",
+   "ofertas": [
+    19.89,
+    19.9,
+    20,
+    20
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-017",
+   "m": "Lattafa",
+   "n": "Angham Second Song",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-angham-second-song-eau-de-parfum-feminino-100ml_67571/",
+   "ofertas": [
+    18,
+    18,
+    18,
+    18
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-118",
+   "m": "Lattafa",
+   "n": "Teriaq Intense",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-teriaq-intense-eau-de-parfum-unissex-100ml_57755/",
+   "ofertas": [
+    25,
+    27,
+    28,
+    28
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-065",
+   "m": "Lattafa",
+   "n": "Khamrah",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-khamrah-eau-de-parfum-unissex-100ml_53599/",
+   "ofertas": [
+    20,
+    20,
+    20,
+    23
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-123",
+   "m": "Lattafa",
+   "n": "Yara",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-yara-eau-de-parfum-feminino-100ml_50537/",
+   "ofertas": [
+    22,
+    22,
+    22.9,
+    23.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-132",
+   "m": "Lattafa",
+   "n": "Yara Tous",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-yara-tous-eau-de-parfum-feminino-100ml_51334/",
+   "ofertas": [
+    16.49,
+    16.5,
+    16.5,
+    16.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-040",
+   "m": "Lattafa",
+   "n": "Eclaire",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-eclaire-eau-de-parfum-feminino-100ml_55656/",
+   "ofertas": [
+    23.99,
+    24,
+    25,
+    30
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-220",
+   "m": "French Avenue",
+   "n": "Liquid Brun",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-french-avenue-liquid-brun-eau-de-parfum-masculino-100ml_61029/",
+   "ofertas": [
+    32.5,
+    32.5,
+    32.5,
+    33
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-282",
+   "m": "Maison Alhambra",
+   "n": "Philos Pura",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-philos-pura-eau-de-parfum-unissex-100ml_51290/",
+   "ofertas": [
+    13,
+    13,
+    13,
+    14
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-263",
+   "m": "Maison Alhambra",
+   "n": "Glacier Bold",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-glacier-bold-eau-de-parfum-masculino-100ml_53604/",
+   "ofertas": [
+    12,
+    12,
+    12,
+    12
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-271",
+   "m": "Maison Alhambra",
+   "n": "Salvo Elixir",
+   "pres": "EDP 60 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-salvo-elixir-eau-de-parfum-masculino-60ml_52386/",
+   "ofertas": [
+    13,
+    15,
+    16,
+    17
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-293",
+   "m": "Maison Alhambra",
+   "n": "So Candid (fem.)",
+   "pres": "EDP 85 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-so-candid-eau-de-parfum-feminino-85ml_51214/",
+   "ofertas": [
+    14.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-240",
+   "m": "Maison Alhambra",
+   "n": "Pink Eclipse",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-pink-eclipse-eau-de-parfum-feminino-100ml_57483/",
+   "ofertas": [
+    14.5,
+    25.49,
+    25.5,
+    25.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-239",
+   "m": "Maison Alhambra",
+   "n": "Decadent Dream",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-decadent-dream-eau-de-parfum-feminino-100ml_57802/",
+   "ofertas": [
+    11.5,
+    11.5,
+    12.5,
+    12.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-106",
+   "m": "Lattafa",
+   "n": "Qaed Al Fursan",
+   "pres": "EDP 90 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-qaed-al-fursan-eau-de-parfum-unissex-90ml_52411/",
+   "ofertas": [
+    14.9,
+    14.99,
+    15,
+    15
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-176",
+   "m": "Armaf",
+   "n": "Odyssey Mandarin Sky",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-armaf-odyssey-mandarin-sky-eau-de-parfum-masculino-100ml_56296/",
+   "ofertas": [
+    18.5,
+    18.5,
+    18.5,
+    18.5
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "PY-004",
+   "m": "Maison Alhambra",
+   "n": "Jean Lowe Azure",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-maison-alhambra-jean-lowe-azure-eau-de-parfum-unissex-100ml_67724/",
+   "ofertas": [
+    18.9,
+    19,
+    19,
+    19
+   ],
+   "fecha": "2026-10-25"
+  },
+  {
+   "c": "AR-013",
+   "m": "Lattafa",
+   "n": "Asad Zanzibar",
+   "pres": "EDP 100 ml",
+   "cat": "arabe",
+   "url": "https://www.comprasparaguai.com.br/perfume-lattafa-asad-zanzibar-eau-de-parfum-masculino-100ml_53082/",
+   "ofertas": [
+    16.99,
+    17,
+    19,
+    20
+   ],
+   "fecha": "2026-10-25"
+  }
+ ]
+}
