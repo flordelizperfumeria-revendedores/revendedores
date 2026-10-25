@@ -344,7 +344,7 @@ footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
         <tbody id="encBody"></tbody>
       </table>
     </div>
-    <p class="nota">El precio es estimado y se confirma por WhatsApp antes de encargar. Los encargos no tienen descuento por escala.</p>
+    <p class="nota">El precio es estimado y se confirma por WhatsApp antes de encargar. Los encargos tienen el mismo descuento por escala que el stock.</p>
     <div class="cotizar">
       <label for="cotizar">¿Buscás otro perfume? Escribilo y te lo cotizamos</label>
       <div class="cotizar-fila">
@@ -481,13 +481,15 @@ const comboSug = k => k.items.reduce((a,c)=>a+sugerido(BY[c]),0);
 const comboUsd = k => k.ars/DOLAR;
 const encNombre = e => e.n.toLowerCase().includes(e.m.toLowerCase()) ? e.n : `${e.m} ${e.n}`;
 const encSug = e => r100(e.u*DOLAR*MARKUP[e.cat]);
+const encCosto = (e,t) => { const d = t?t.desc:0; return {usd:e.u*(1-d), ars:e.u*DOLAR*(1-d)}; };
 function renderEncargos(){
+  const t = tierActual();
   const q = document.getElementById("buscarEnc").value.trim().toLowerCase();
   const list = ENCARGOS.filter(e => !q || (e.n+" "+e.m).toLowerCase().includes(q));
-  document.getElementById("encBody").innerHTML = list.length ? list.map(e=>{ const c=cart.enc[e.c]||0, ea=e.u*DOLAR;
+  document.getElementById("encBody").innerHTML = list.length ? list.map(e=>{ const c=cart.enc[e.c]||0, ec=encCosto(e,t), ea=ec.ars;
     return `<tr>
       <td><div class="p-nom">${e.n}</div><div class="p-marca">${e.m} · ${e.pres}</div></td>
-      <td class="r num col-usd">${fmtU(e.u)}</td>
+      <td class="r num col-usd">${fmtU(ec.usd)}</td>
       <td class="r num">${fmt(ea)}</td>
       <td class="r num col-sug">${fmt(encSug(e))}</td>
       <td class="r num gana">${fmt(encSug(e)-ea)}</td>
@@ -594,8 +596,8 @@ function totales(){
     usd+=comboUsd(k)*c; ars+=k.ars*c; ahorro+=(comboSep(k)-k.ars)*c; gan+=(comboSug(k)-k.ars)*c;
     lineas.push({txt:`${c} × Combo ${k.n} (${k.items.map(x=>nombre(BY[x])).join(", ")})`, ars:k.ars*c}); });
   let encUsd=0, encArs=0;
-  ENCARGOS.forEach(e=>{ const c=cart.enc[e.c]; if(!c) return; const ea=e.u*DOLAR;
-    usd+=e.u*c; ars+=ea*c; encUsd+=e.u*c; encArs+=ea*c; gan+=(encSug(e)-ea)*c;
+  ENCARGOS.forEach(e=>{ const c=cart.enc[e.c]; if(!c) return; const ec=encCosto(e,t), ea=ec.ars;
+    usd+=ec.usd*c; ars+=ea*c; ahorro+=(e.u*DOLAR-ea)*c; encUsd+=ec.usd*c; encArs+=ea*c; gan+=(encSug(e)-ea)*c;
     lineas.push({txt:`${c} × ${encNombre(e)} ${e.pres} (encargo, precio estimado)`, ars:ea*c}); });
   return {t, usd, ars, ahorro, gan, lineas, encUsd, encArs};
 }

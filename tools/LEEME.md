@@ -31,6 +31,6 @@ Lista en `tools/encargos.json`. Cada producto: código (`c`, el del Sheet o `PY-
 - Precio base: la oferta más barata; si está 20 % o más abajo de la segunda, se usa la segunda.
 - Precio al revendedor (USD, redondeado hacia arriba): árabes base × 1,52 · diseñador base × 1,42 · nicho base × 1,17 + 20.
 - Si el producto tiene stock en el Sheet, no aparece como encargo (está en la lista de stock).
-- Suman unidades para la escala, sin descuento. Leyenda: "pueden tardar hasta 15 días hábiles".
+- Suman unidades para la escala y tienen el mismo descuento por escala que el stock (5 % en 10+, 8 % en 15+). Leyenda: "pueden tardar hasta 15 días hábiles".
 
 Actualización semanal: para cada producto, abrir la URL con WebFetch (de a 3–4 por vez, con pausa si aparece 429) y reemplazar `ofertas` y `fecha`. Para sumar productos: buscar en `https://www.comprasparaguai.com.br/busca/?q=<nombre>`, abrir la ficha de la presentación correcta y agregarlo. Después correr `actualizar.py` como siempre.
