@@ -1,0 +1,591 @@
+{
+ "_leeme": "Nombres prolijos que muestra el panel (por código). Los productos nuevos usan el nombre del Sheet hasta que se agreguen acá.",
+ "nombres": {
+  "AR-002": {
+   "m": "Lattafa",
+   "n": "Adeeb",
+   "cat": "arabe"
+  },
+  "AR-006": {
+   "m": "Lattafa",
+   "n": "Ajwad Pink to Pink",
+   "cat": "arabe"
+  },
+  "AR-009": {
+   "m": "Lattafa",
+   "n": "Al Qiam Gold",
+   "cat": "arabe"
+  },
+  "AR-015": {
+   "m": "Lattafa",
+   "n": "Ansaam Gold",
+   "cat": "arabe"
+  },
+  "AR-018": {
+   "m": "Lattafa",
+   "n": "Antiquités 1505",
+   "cat": "arabe"
+  },
+  "AR-020": {
+   "m": "Lattafa",
+   "n": "Antiquités 1910",
+   "cat": "arabe"
+  },
+  "AR-023": {
+   "m": "Lattafa",
+   "n": "Asad",
+   "cat": "arabe"
+  },
+  "AR-028": {
+   "m": "Lattafa",
+   "n": "Atlas Canyon",
+   "cat": "arabe"
+  },
+  "AR-029": {
+   "m": "Lattafa",
+   "n": "Atlas Glacial Valley",
+   "cat": "arabe"
+  },
+  "AR-035": {
+   "m": "Lattafa",
+   "n": "Bade'e Al Oud Black Exposed",
+   "cat": "arabe"
+  },
+  "AR-036": {
+   "m": "Lattafa",
+   "n": "Bade'e Al Oud For Glory",
+   "cat": "arabe"
+  },
+  "AR-043": {
+   "m": "Lattafa",
+   "n": "Ekhtiari",
+   "cat": "arabe"
+  },
+  "AR-045": {
+   "m": "Lattafa",
+   "n": "Embrace",
+   "cat": "arabe"
+  },
+  "AR-046": {
+   "m": "Lattafa",
+   "n": "Emeer",
+   "cat": "arabe"
+  },
+  "AR-047": {
+   "m": "Lattafa",
+   "n": "Eternal Oud",
+   "cat": "arabe"
+  },
+  "AR-048": {
+   "m": "Lattafa",
+   "n": "Fakhar Black",
+   "cat": "arabe"
+  },
+  "AR-053": {
+   "m": "Lattafa",
+   "n": "Haya",
+   "cat": "arabe"
+  },
+  "AR-056": {
+   "m": "Lattafa",
+   "n": "Hayaati Al Maleky",
+   "cat": "arabe"
+  },
+  "AR-058": {
+   "m": "Lattafa",
+   "n": "Hayaati Gold Elixir",
+   "cat": "arabe"
+  },
+  "AR-060": {
+   "m": "Lattafa",
+   "n": "Her Confession",
+   "cat": "arabe"
+  },
+  "AR-061": {
+   "m": "Lattafa",
+   "n": "His Confession",
+   "cat": "arabe"
+  },
+  "AR-066": {
+   "m": "Lattafa",
+   "n": "Khamrah Dukhan",
+   "cat": "arabe"
+  },
+  "AR-067": {
+   "m": "Lattafa",
+   "n": "Khamrah Qahwa",
+   "cat": "arabe"
+  },
+  "AR-081": {
+   "m": "Lattafa",
+   "n": "Mashrabya",
+   "cat": "arabe"
+  },
+  "AR-082": {
+   "m": "Lattafa",
+   "n": "Mayar",
+   "cat": "arabe"
+  },
+  "AR-085": {
+   "m": "Lattafa",
+   "n": "Musamam White",
+   "cat": "arabe"
+  },
+  "AR-088": {
+   "m": "Lattafa",
+   "n": "Najdia Intense",
+   "cat": "arabe"
+  },
+  "AR-089": {
+   "m": "Lattafa",
+   "n": "Natural Oud",
+   "cat": "arabe"
+  },
+  "AR-091": {
+   "m": "Lattafa",
+   "n": "Nebras",
+   "cat": "arabe"
+  },
+  "AR-093": {
+   "m": "Lattafa",
+   "n": "Niche Emarati Al Jawhara",
+   "cat": "arabe"
+  },
+  "AR-095": {
+   "m": "Lattafa",
+   "n": "Niche Emarati Lujain",
+   "cat": "arabe"
+  },
+  "AR-102": {
+   "m": "Lattafa",
+   "n": "Qaa'ed",
+   "cat": "arabe"
+  },
+  "AR-113": {
+   "m": "Lattafa",
+   "n": "Ra'ed",
+   "cat": "arabe"
+  },
+  "AR-114": {
+   "m": "Lattafa",
+   "n": "Rave Now Rosa",
+   "cat": "arabe"
+  },
+  "AR-117": {
+   "m": "Lattafa",
+   "n": "Teriaq",
+   "cat": "arabe"
+  },
+  "AR-118": {
+   "m": "Lattafa",
+   "n": "Teriaq Intense",
+   "cat": "arabe"
+  },
+  "AR-122": {
+   "m": "Lattafa",
+   "n": "The Kingdom (masc.)",
+   "cat": "arabe"
+  },
+  "AR-124": {
+   "m": "Lattafa",
+   "n": "Yara Aceite",
+   "cat": "arabe"
+  },
+  "AR-128": {
+   "m": "Lattafa",
+   "n": "Yara Moi",
+   "cat": "arabe"
+  },
+  "AR-154": {
+   "m": "Armaf",
+   "n": "Club de Nuit Intense Man",
+   "cat": "arabe"
+  },
+  "AR-152": {
+   "m": "Armaf",
+   "n": "Eter Desert Night",
+   "cat": "arabe"
+  },
+  "AR-153": {
+   "m": "Armaf",
+   "n": "Club de Nuit Précieux I",
+   "cat": "arabe"
+  },
+  "AR-165": {
+   "m": "Armaf",
+   "n": "Dubai Nights Midnight",
+   "cat": "arabe"
+  },
+  "AR-168": {
+   "m": "Armaf",
+   "n": "Odyssey Go Mango",
+   "cat": "arabe"
+  },
+  "AR-185": {
+   "m": "Afnan",
+   "n": "9PM Night Out",
+   "cat": "arabe"
+  },
+  "AR-195": {
+   "m": "Afnan",
+   "n": "Turathi Electric",
+   "cat": "arabe"
+  },
+  "AR-200": {
+   "m": "Dumont",
+   "n": "Borouj Silage",
+   "cat": "arabe"
+  },
+  "AR-210": {
+   "m": "French Avenue",
+   "n": "Amber Empire",
+   "cat": "arabe"
+  },
+  "AR-216": {
+   "m": "French Avenue",
+   "n": "Cocoa Morado",
+   "cat": "arabe"
+  },
+  "AR-217": {
+   "m": "French Avenue",
+   "n": "Grecia",
+   "cat": "arabe"
+  },
+  "AR-218": {
+   "m": "French Avenue",
+   "n": "Just Azraq Azul",
+   "cat": "arabe"
+  },
+  "AR-222": {
+   "m": "French Avenue",
+   "n": "Miraj Absolu",
+   "cat": "arabe"
+  },
+  "AR-225": {
+   "m": "French Avenue",
+   "n": "Royal Blend Vintage",
+   "cat": "arabe"
+  },
+  "AR-226": {
+   "m": "French Avenue",
+   "n": "Sweet Paradise",
+   "cat": "arabe"
+  },
+  "AR-228": {
+   "m": "French Avenue",
+   "n": "Venti Green Tweed",
+   "cat": "arabe"
+  },
+  "AR-229": {
+   "m": "French Avenue",
+   "n": "Venus de Milo",
+   "cat": "arabe"
+  },
+  "AR-230": {
+   "m": "French Avenue",
+   "n": "Vulcan Baie",
+   "cat": "arabe"
+  },
+  "AR-231": {
+   "m": "French Avenue",
+   "n": "Vulcan Feu",
+   "cat": "arabe"
+  },
+  "AR-237": {
+   "m": "Maison Alhambra",
+   "n": "Dark Door Sport",
+   "cat": "arabe"
+  },
+  "AR-238": {
+   "m": "Maison Alhambra",
+   "n": "Celeste",
+   "cat": "arabe"
+  },
+  "AR-256": {
+   "m": "Maison Alhambra",
+   "n": "Jubilant Vitality",
+   "cat": "arabe"
+  },
+  "AR-260": {
+   "m": "Maison Alhambra",
+   "n": "Glacier Bella",
+   "cat": "arabe"
+  },
+  "AR-278": {
+   "m": "Maison Alhambra",
+   "n": "Montaigne Coco",
+   "cat": "arabe"
+  },
+  "AR-279": {
+   "m": "Maison Alhambra",
+   "n": "Montaigne Vanille",
+   "cat": "arabe"
+  },
+  "AR-282": {
+   "m": "Maison Alhambra",
+   "n": "Philos Pura",
+   "cat": "arabe"
+  },
+  "AR-283": {
+   "m": "Maison Alhambra",
+   "n": "Philos Centro",
+   "cat": "arabe"
+  },
+  "AR-296": {
+   "m": "Maison Alhambra",
+   "n": "Velvet Secret Pink Chic",
+   "cat": "arabe"
+  },
+  "AR-307": {
+   "m": "Rasasi",
+   "n": "Hawas Kobra",
+   "cat": "arabe"
+  },
+  "AR-308": {
+   "m": "Rasasi",
+   "n": "Hawas Malibu",
+   "cat": "arabe"
+  },
+  "AR-310": {
+   "m": "Rasasi",
+   "n": "Hawas Tropical",
+   "cat": "arabe"
+  },
+  "AR-379": {
+   "m": "Rasasi",
+   "n": "Hawas Diva",
+   "cat": "arabe"
+  },
+  "AR-324": {
+   "m": "Bharara",
+   "n": "Kit Bharara miniaturas",
+   "cat": "arabe"
+  },
+  "AR-327": {
+   "m": "Bharara",
+   "n": "Rome Paradoxe",
+   "cat": "arabe"
+  },
+  "AR-332": {
+   "m": "Al Fares",
+   "n": "Arabesque Amethyst",
+   "cat": "arabe"
+  },
+  "AR-338": {
+   "m": "Aurora Scents",
+   "n": "Cleopatra",
+   "cat": "arabe"
+  },
+  "AR-341": {
+   "m": "Aurora Scents",
+   "n": "Pharaoh",
+   "cat": "arabe"
+  },
+  "AR-342": {
+   "m": "Emper",
+   "n": "Monarch Instant Crush Gold",
+   "cat": "arabe"
+  },
+  "AR-343": {
+   "m": "Emper",
+   "n": "Phantom My Hero",
+   "cat": "arabe"
+  },
+  "AR-346": {
+   "m": "Hamidi",
+   "n": "Hatshepsut Legacy",
+   "cat": "arabe"
+  },
+  "AR-349": {
+   "m": "Le Chameau",
+   "n": "Arabia Heroes",
+   "cat": "arabe"
+  },
+  "AR-352": {
+   "m": "Le Falconé",
+   "n": "Jasper",
+   "cat": "arabe"
+  },
+  "AR-353": {
+   "m": "Le Falconé",
+   "n": "Marbre",
+   "cat": "arabe"
+  },
+  "AR-354": {
+   "m": "Le Falconé",
+   "n": "Al Jawad",
+   "cat": "arabe"
+  },
+  "AR-355": {
+   "m": "Le Falconé",
+   "n": "Aseel",
+   "cat": "arabe"
+  },
+  "AR-357": {
+   "m": "Maison Asrar",
+   "n": "Gold Noir",
+   "cat": "arabe"
+  },
+  "AR-359": {
+   "m": "Maison Asrar",
+   "n": "Vanilla Voyage",
+   "cat": "arabe"
+  },
+  "AR-367": {
+   "m": "Rayhaan",
+   "n": "Kiss",
+   "cat": "arabe"
+  },
+  "AR-371": {
+   "m": "Rayhaan",
+   "n": "Tropical Vibe",
+   "cat": "arabe"
+  },
+  "AR-372": {
+   "m": "Rayhaan",
+   "n": "Valhalla",
+   "cat": "arabe"
+  },
+  "AR-374": {
+   "m": "Riiffs",
+   "n": "Samah Amethyst",
+   "cat": "arabe"
+  },
+  "AR-378": {
+   "m": "Zakat",
+   "n": "World Cup VIP",
+   "cat": "arabe"
+  },
+  "DN-002": {
+   "m": "Armani",
+   "n": "Code EDT",
+   "cat": "disenador"
+  },
+  "DN-008": {
+   "m": "Britney Spears",
+   "n": "Midnight Fantasy",
+   "cat": "disenador"
+  },
+  "DN-018": {
+   "m": "Dolce & Gabbana",
+   "n": "Pour Femme EDP",
+   "cat": "disenador"
+  },
+  "DN-020": {
+   "m": "Dolce & Gabbana",
+   "n": "The One EDP",
+   "cat": "disenador"
+  },
+  "DN-021": {
+   "m": "Dolce & Gabbana",
+   "n": "The One EDT",
+   "cat": "disenador"
+  },
+  "DN-023": {
+   "m": "Dolce & Gabbana",
+   "n": "Devotion Intense",
+   "cat": "disenador"
+  },
+  "DN-027": {
+   "m": "Dolce & Gabbana",
+   "n": "Devotion EDP",
+   "cat": "disenador"
+  },
+  "DN-046": {
+   "m": "Prada",
+   "n": "L'Homme L'Eau",
+   "cat": "disenador"
+  },
+  "DN-047": {
+   "m": "Sabrina Carpenter",
+   "n": "Sweet Tooth Me Espresso 75 ml",
+   "cat": "disenador"
+  },
+  "DN-048": {
+   "m": "Tom Ford",
+   "n": "Costa Azzurra",
+   "cat": "nicho"
+  },
+  "DN-058": {
+   "m": "Xerjoff",
+   "n": "Erba Pura",
+   "cat": "nicho"
+  },
+  "DN-060": {
+   "m": "Xerjoff",
+   "n": "Torino 21",
+   "cat": "nicho"
+  },
+  "TS-005": {
+   "m": "Calvin Klein",
+   "n": "Tester CK IN2U fem",
+   "cat": "tester"
+  },
+  "TS-015": {
+   "m": "Nina Ricci",
+   "n": "Tester Nina EDT",
+   "cat": "tester"
+  },
+  "CK-003": {
+   "m": "Karseell",
+   "n": "Maca Power 500 ml",
+   "cat": "kit"
+  },
+  "CK-024": {
+   "m": "Dolce & Gabbana",
+   "n": "Kit K EDP",
+   "cat": "kit_dis"
+  },
+  "CK-025": {
+   "m": "Dolce & Gabbana",
+   "n": "Kit K EDT",
+   "cat": "kit_dis"
+  },
+  "CK-012": {
+   "m": "Lattafa",
+   "n": "Kit Lattafa Pride (Nebras, Art of Wood, Art of Universe, Ansaam Gold, Kashan)",
+   "cat": "kit"
+  }
+ },
+ "marcas": {
+  "Fragance World/French Avenue": "French Avenue"
+ },
+ "excluir": [
+  "CK-007"
+ ],
+ "precio_fijo": [
+  "AR-341",
+  "DN-002",
+  "DN-018",
+  "DN-020",
+  "DN-021",
+  "DN-027",
+  "CK-025",
+  "AR-216",
+  "AR-222",
+  "AR-225",
+  "AR-346",
+  "AR-023",
+  "AR-043",
+  "AR-102",
+  "AR-349",
+  "AR-354",
+  "AR-355",
+  "AR-352",
+  "AR-353",
+  "AR-359",
+  "TS-015",
+  "DN-046",
+  "AR-374",
+  "DN-048",
+  "DN-058",
+  "AR-378"
+ ],
+ "categorias": {
+  "Árabes": "arabe",
+  "Diseñador": "disenador",
+  "Nicho": "nicho",
+  "Testers": "tester",
+  "Cremas y kits": "kit"
+ }
+}
