@@ -1,0 +1,51 @@
+name: Kiai · compilar APK
+
+on:
+  push:
+    paths:
+      - "despertador/**"
+      - ".github/workflows/despertador-apk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: despertador
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Compilar
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Preparar APK
+        run: cp app/build/outputs/apk/release/app-release.apk ../kiai.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kiai-apk
+          path: kiai.apk
+
+      - name: Publicar versión descargable
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: kiai-v${{ github.run_number }}
+          name: Kiai ${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          make_latest: "true"
+          files: kiai.apk
+          body: |
+            Despertador Kiai. Descargá **kiai.apk** desde el celular Android y abrilo para instalar.
