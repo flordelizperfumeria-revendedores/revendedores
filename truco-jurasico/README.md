@@ -5,6 +5,11 @@ dinosaurios nunca se extinguieron. Hecho en **Godot 4.4** (GDScript), sin
 archivos de arte ni de audio externos: todo (cartas, personajes, escenario,
 música y efectos) se genera por código. Pesa menos de 200 KB de código fuente.
 
+| Menú | Mesa |
+|---|---|
+| ![menú](docs/menu.png) | ![mesa](docs/mesa.png) |
+| ![selección](docs/seleccion.png) | ![fin de partida](docs/fin_partida.png) |
+
 ## Cómo jugarlo ya (en tu computadora)
 
 1. Descargá **Godot 4.4.1** (versión estándar, no la .NET) de
