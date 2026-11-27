@@ -248,10 +248,10 @@ footer{padding-block:28px;color:var(--gris);font-size:.8rem;text-align:center}
     <div class="pack-top">
       <div class="sec-head" style="margin:0">
         <div class="eyebrow">Pack de la semana</div>
-        <h2>Frescos para primavera</h2>
-        <p>Cuatro perfumes que están saliendo con el calor. Te dejamos ideas de texto por si te sirven.</p>
+        <h2>Verano y fiestas</h2>
+        <p>Cuatro perfumes para el calor y para regalar en las fiestas, todos con buen stock. Te dejamos ideas de texto por si te sirven.</p>
       </div>
-      <span class="fecha-pill">Semana del 19 de octubre</span>
+      <span class="fecha-pill">Desde el 27 de noviembre</span>
     </div>
     <div class="pack-grid" id="packGrid"></div>
 
@@ -443,18 +443,19 @@ const TIERS = [
   {min:15,label:"15+",desc:.08, precio:"8% de descuento",  ben:["Kit de contenido","6 decants de 5 ml (perfumes seleccionados)"], extra:"6 decants y 8% off"}
 ];
 const PACK = [
-  {c:"AR-371", para:"Para el calor", d:"Uno de los que más rotan. Si te piden algo fresco para estos días, es una buena primera opción."},
-  {c:"AR-308", para:"Para él", d:"De la línea Hawas de Rasasi, de las más buscadas. Este lo marcamos para primavera."},
-  {c:"AR-278", para:"Para ella", d:"El más accesible del pack. Buen margen para vos y fácil de recomendar."},
-  {c:"DN-046", para:"Diseñador", d:"Original de Prada, fresco y limpio. Para el que prefiere una marca conocida."}
+  {c:"AR-309", para:"Para el calor", d:"De la línea Hawas de Rasasi, una de las más buscadas. Fresco, ideal para el día en verano."},
+  {c:"AR-185", para:"Para las fiestas", d:"Uno de los que más se piden para salir de noche. Buena opción para regalar."},
+  {c:"AR-367", para:"Para ella", d:"De Rayhaan, la marca que más está creciendo. Volvió a entrar y hay stock para ofrecerlo tranquilo."},
+  {c:"AR-279", para:"Precio accesible", d:"El más económico del pack, en oferta. Fácil de recomendar como regalo y con buen margen para vos."}
 ];
 const OCASIONES = [
-  ["Algo fresco para el día","Prada L'Homme L'Eau","DN-046"],
+  ["Algo fresco para el día","Rasasi Hawas Ice","AR-309"],
   ["Un perfume para el calor","Rayhaan Tropical Vibe","AR-371"],
-  ["Para ella, con poco presupuesto","Montaigne Coco","AR-278"],
+  ["Para una salida de noche","Afnan 9PM Night Out","AR-185"],
+  ["Para ella, con poco presupuesto","Montaigne Vanille","AR-279"],
   ["Un regalo vistoso","Kit Bharara miniaturas","AR-324"]
 ];
-const EQUIV = [["Paradoxe (Prada)","AR-327"],["Angels' Share (Kilian)","AR-200"],["Eros EDP (Versace)","AR-349"],["Sauvage Elixir (Dior)","AR-023"]];
+const EQUIV = [["Angels' Share (Kilian)","AR-200"],["Eros EDP (Versace)","AR-349"],["Coco Mademoiselle (Chanel)","AR-163"]];
 
 const fmt = n => "$" + Math.round(n).toLocaleString("es-AR");
 const fmtU = n => "USD " + (Math.round(n*100)/100).toLocaleString("es-AR",{maximumFractionDigits:2});
@@ -530,9 +531,9 @@ function renderPack(){
   }).join("");
   const ps = packOk.map(x=>BY[x.c]), a = ps[0];
   const T = !a ? [] : [
-    ["Estado de WhatsApp", `Ya llegó el calor y con él los perfumes frescos 🌿\nSi estás buscando uno para estos días, escribime y te ayudo a elegir el que más te guste.`],
-    ["Mensaje a un cliente", `¡Hola! ¿Cómo estás? Te cuento que tengo algunos perfumes que van muy bien para primavera:\n${ps.map(p=>"• "+nombre(p)+" – "+fmt(sugerido(p))).join("\n")}\nSi me contás qué te gusta, te recomiendo el que mejor te quede.`],
-    ["Historia de Instagram", `¿Buscás algo fresco para estos días? 👀\nTe recomiendo ${nombre(a)}. Escribime y te cuento más.`]
+    ["Estado de WhatsApp", `Se vienen las fiestas 🎁\nSi querés regalar un perfume (o regalarte uno), escribime y te ayudo a elegir según el gusto de la persona.`],
+    ["Mensaje a un cliente", `¡Hola! ¿Cómo estás? Te cuento que tengo algunos perfumes que van muy bien para el verano y para regalar en las fiestas:\n${ps.map(p=>"• "+nombre(p)+" – "+fmt(sugerido(p))).join("\n")}\nSi me contás qué te gusta, te recomiendo el que mejor te quede.`],
+    ["Historia de Instagram", `¿Ya pensaste qué regalar estas fiestas? 🎁\nUn perfume nunca falla. Te recomiendo ${nombre(a)}. Escribime y te cuento más.`]
   ];
   document.getElementById("textos").innerHTML = T.map((x,i)=>`
     <div class="texto"><div class="eyebrow">${x[0]}</div><pre id="t${i}">${x[1]}</pre><button class="btn sec" data-copy="t${i}">Copiar texto</button></div>`).join("");
