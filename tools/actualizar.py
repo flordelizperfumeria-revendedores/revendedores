@@ -59,6 +59,7 @@ def main():
     for r in lista:
         r = list(r) + [""] * (12 - len(r))
         cod, cat_s, marca, nom, stock, _, usd = r[0].strip(), r[1].strip(), r[2].strip(), r[3].strip(), num(r[4]), r[5], num(r[6])
+        usd = cfg.get("precio_panel", {}).get(cod, usd)  # precio solo para el panel (no toca Sheet ni web)
         if not cod or cod in cfg["excluir"] or not stock or stock <= 0 or not usd:
             continue
         cat = cfg["categorias"].get(cat_s)
