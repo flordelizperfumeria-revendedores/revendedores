@@ -513,7 +513,9 @@ function addBtn(code){ const ok = libre(code)>0; return `<button class="btn sec"
 
 function renderPack(){
   const t = tierActual();
-  document.getElementById("packGrid").innerHTML = PACK.map(x=>{
+  const packOk = PACK.filter(x=>BY[x.c]);
+  document.getElementById("pack").hidden = !packOk.length;
+  document.getElementById("packGrid").innerHTML = packOk.map(x=>{
     const p = BY[x.c];
     return `<article class="p-card">
       <div class="foto" style="aspect-ratio:1/1">${foto(p.c, nombre(p))}</div>
@@ -526,15 +528,15 @@ function renderPack(){
       ${addBtn(p.c)}
     </article>`;
   }).join("");
-  const [a,b,c,d] = PACK.map(x=>BY[x.c]);
-  const T = [
+  const ps = packOk.map(x=>BY[x.c]), a = ps[0];
+  const T = !a ? [] : [
     ["Estado de WhatsApp", `Ya llegó el calor y con él los perfumes frescos 🌿\nSi estás buscando uno para estos días, escribime y te ayudo a elegir el que más te guste.`],
-    ["Mensaje a un cliente", `¡Hola! ¿Cómo estás? Te cuento que tengo algunos perfumes que van muy bien para primavera:\n• ${nombre(a)} – ${fmt(sugerido(a))}\n• ${nombre(b)} – ${fmt(sugerido(b))}\n• ${nombre(c)} – ${fmt(sugerido(c))}\n• ${d.m} ${d.n} – ${fmt(sugerido(d))}\nSi me contás qué te gusta, te recomiendo el que mejor te quede.`],
+    ["Mensaje a un cliente", `¡Hola! ¿Cómo estás? Te cuento que tengo algunos perfumes que van muy bien para primavera:\n${ps.map(p=>"• "+nombre(p)+" – "+fmt(sugerido(p))).join("\n")}\nSi me contás qué te gusta, te recomiendo el que mejor te quede.`],
     ["Historia de Instagram", `¿Buscás algo fresco para estos días? 👀\nTe recomiendo ${nombre(a)}. Escribime y te cuento más.`]
   ];
   document.getElementById("textos").innerHTML = T.map((x,i)=>`
     <div class="texto"><div class="eyebrow">${x[0]}</div><pre id="t${i}">${x[1]}</pre><button class="btn sec" data-copy="t${i}">Copiar texto</button></div>`).join("");
-  document.getElementById("ocasiones").innerHTML = OCASIONES.map(o=>`<div class="oc"><span>${o[0]}</span><b>${o[1]}</b></div>`).join("");
+  document.getElementById("ocasiones").innerHTML = OCASIONES.filter(o=>BY[o[2]]).map(o=>`<div class="oc"><span>${o[0]}</span><b>${o[1]}</b></div>`).join("");
 }
 
 function renderCombos(){
@@ -583,7 +585,7 @@ function renderStock(){
 
 function renderEquiv(){
   const t = tierActual();
-  document.getElementById("equiv").innerHTML = EQUIV.map(([te,c])=>{ const p = BY[c];
+  document.getElementById("equiv").innerHTML = EQUIV.filter(([te,c])=>BY[c]).map(([te,c])=>{ const p = BY[c];
     return `<div class="eq"><span class="te">Si te piden ${te}</span><span class="of">${nombre(p)}</span><span class="small">Ganás ${fmt(ganancia(p,t))} · ${p.s} en stock</span></div>`; }).join("");
 }
 
@@ -635,7 +637,7 @@ function renderPedido(){
   document.getElementById("barraFill").style.width = Math.min(100,u/15*100)+"%";
 }
 
-function renderAll(){ renderPack(); renderCombos(); renderEscala(); renderStock(); renderEncargos(); renderEquiv(); renderPedido(); save(); }
+function renderAll(){ [renderPack, renderCombos, renderEscala, renderStock, renderEncargos, renderEquiv, renderPedido].forEach(f=>{ try{ f(); }catch(e){ console.error(f.name, e); } }); save(); }
 
 document.addEventListener("click", e=>{
   const a=e.target.closest("[data-add]"), s=e.target.closest("[data-sub]"), ca=e.target.closest("[data-cadd]"), cs=e.target.closest("[data-csub]"), cp=e.target.closest("[data-copy]");
